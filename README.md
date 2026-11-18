@@ -1,1 +1,1 @@
-# 1lim.academy-
+# 1lim.academy
