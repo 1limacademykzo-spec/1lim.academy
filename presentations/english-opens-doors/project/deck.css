@@ -1,0 +1,45 @@
+section{padding:128px;background:#101C3A;color:#FFFFFF;font-family:'Inter',Arial,sans-serif;box-sizing:border-box;display:flex;flex-direction:column;}
+section.deep{background:#0A1330;}
+section.accent{background:linear-gradient(160deg,#1E46B4 0%,#152C70 45%,#101C3A 100%);}
+section.center{justify-content:center;}
+.bleed{position:absolute;left:0;top:0;width:1920px;height:1080px;}
+.eyebrow{margin:0;font-family:'Montserrat',Arial,sans-serif;font-weight:700;font-size:24px;letter-spacing:6px;color:#FFC857;}
+.title{margin:0;font-family:'Montserrat',Arial,sans-serif;font-weight:800;font-size:120px;line-height:1;letter-spacing:-2px;color:#FFFFFF;text-shadow:0 0 48px rgba(255,200,87,0.28);}
+.head{margin:0;font-family:'Montserrat',Arial,sans-serif;font-weight:800;font-size:72px;line-height:1.05;letter-spacing:-1px;color:#FFFFFF;}
+.g{color:#FFC857;}
+.b{color:#397BFF;}
+.sub{margin:0;font-size:44px;line-height:1.2;color:#B8D9FF;}
+.statement{margin:0;font-family:'Montserrat',Arial,sans-serif;font-weight:800;font-size:44px;line-height:1.2;color:#FFFFFF;}
+.lead{margin:0;font-size:32px;line-height:1.4;font-weight:600;color:#FFFFFF;}
+.body{margin:0;font-size:32px;line-height:1.4;color:#C9D6EE;}
+.small{margin:0;font-size:24px;line-height:1.4;color:#C9D6EE;}
+.quote{margin:0;font-family:'Montserrat',Arial,sans-serif;font-weight:700;font-size:44px;line-height:1.2;color:#FFC857;}
+.qbar{border-left:6px solid #FFC857;padding-left:32px;}
+.rows{display:flex;flex-direction:column;gap:16px;}
+.row{display:flex;align-items:center;gap:24px;}
+.tick{width:40px;height:40px;color:#FFC857;flex:none;}
+.ic{width:72px;height:72px;border-radius:36px;background:rgba(57,123,255,0.18);border:2px solid rgba(91,149,255,0.7);display:flex;align-items:center;justify-content:center;flex:none;box-shadow:0 0 28px rgba(57,123,255,0.45);}
+.ic x-icon{width:36px;height:36px;color:#B8D9FF;}
+.glass{background:rgba(255,255,255,0.06);border:2px solid rgba(184,217,255,0.22);border-radius:28px;box-shadow:0 24px 60px rgba(3,8,24,0.45);}
+.pill{margin:0;align-self:flex-start;padding:12px 28px;border-radius:40px;border:2px solid rgba(255,200,87,0.6);background:rgba(255,200,87,0.10);font-family:'Montserrat',Arial,sans-serif;font-weight:700;font-size:24px;letter-spacing:6px;color:#FFC857;}
+.badge{margin:0;padding:10px 24px;border-radius:40px;background:#FFC857;color:#101C3A;font-family:'Montserrat',Arial,sans-serif;font-weight:800;font-size:24px;letter-spacing:4px;white-space:nowrap;box-shadow:0 8px 30px rgba(255,200,87,0.45);}
+.float{position:absolute;margin:0;font-family:'Montserrat',Arial,sans-serif;font-weight:800;color:#FFC857;text-shadow:0 0 30px rgba(255,200,87,0.6);}
+.bubble{position:absolute;margin:0;padding:14px 28px;border-radius:32px;background:#FFFFFF;color:#101C3A;font-weight:600;font-size:32px;line-height:1.2;white-space:nowrap;box-shadow:0 12px 36px rgba(3,8,24,0.45);}
+.dcols{display:flex;gap:21px;}
+.dcol{width:316px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;}
+.num{margin:0;font-family:'Montserrat',Arial,sans-serif;font-weight:800;font-size:24px;letter-spacing:3px;color:#FFC857;}
+.num.bl{color:#5B95FF;}
+.dtitle{margin:0;font-family:'Montserrat',Arial,sans-serif;font-weight:700;font-size:32px;line-height:1.2;color:#FFFFFF;}
+.card{padding:28px;display:flex;flex-direction:column;gap:20px;}
+.orb{width:96px;height:96px;border-radius:48px;display:flex;align-items:center;justify-content:center;background:linear-gradient(145deg,#FFE29A 0%,#F2A93B 100%);box-shadow:0 12px 36px rgba(255,200,87,0.45);}
+.orb.blue{background:linear-gradient(145deg,#8DB8FF 0%,#2F63E0 100%);box-shadow:0 12px 36px rgba(57,123,255,0.5);}
+.orb x-icon{width:48px;height:48px;color:#101C3A;}
+.orb.blue x-icon{color:#FFFFFF;}
+.ctitle{margin:0;font-family:'Montserrat',Arial,sans-serif;font-weight:700;font-size:32px;line-height:1.25;color:#FFFFFF;}
+.steplabel{position:absolute;margin:0;width:210px;text-align:center;font-family:'Montserrat',Arial,sans-serif;font-weight:700;font-size:24px;letter-spacing:1px;color:#FFC857;}
+@keyframes rise{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:translateY(0px);}}
+@keyframes fade{from{opacity:0;}to{opacity:1;}}
+@keyframes bloom{from{opacity:0;transform:scale(0.96);}to{opacity:1;transform:scale(1);}}
+.r{animation:rise 650ms cubic-bezier(0.2,0.7,0.2,1) both;animation-delay:calc(var(--i,0) * 90ms);}
+.f{animation:fade 900ms ease-out both;animation-delay:calc(var(--i,0) * 90ms);}
+.z{animation:bloom 900ms cubic-bezier(0.2,0.7,0.2,1) both;animation-delay:calc(var(--i,0) * 90ms);}
