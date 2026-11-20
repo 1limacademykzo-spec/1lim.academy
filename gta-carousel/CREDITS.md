@@ -6,7 +6,7 @@
 | 2 | Кызылорда, мечеть Айтбая.jpg | Nikolai Bulykin | CC BY-SA 4.0 |
 | 3 | Железнодорожный вокзал в Кызыл-Орде.jpg | Coopypasted | CC BY-SA 4.0 |
 | 4 | Kyzylorda Central Square.jpg | peace-on-earth.org | CC BY-SA 4.0 |
-| 5 | Soyuz TMA-05M rocket launches from Baikonur 4.jpg | Carla Cioffi (NASA) | Public domain |
+| 5 | Кызылорда, ворота центрального парка.jpg | Nikolai Bulykin | CC BY-SA 4.0 |
 | 6 | 1LIM.ACADEMY ғимараты | өз фото | — |
 
 Слайдтар өңделген туынды жұмыс, CC BY-SA 4.0 бойынша таратылады.
