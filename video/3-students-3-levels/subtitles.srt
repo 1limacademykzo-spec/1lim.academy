@@ -1,276 +1,276 @@
 1
-00:00:04,000 --> 00:00:07,000
+00:00:04,800 --> 00:00:07,933
 QUESTION 1
 What do you usually do in your free time?
 
 2
-00:00:07,300 --> 00:00:11,739
+00:00:08,433 --> 00:00:11,532
 I watch TV and
 listen to music.
 
 3
-00:00:11,789 --> 00:00:14,561
+00:00:11,562 --> 00:00:13,754
 I like playing games.
 
 4
-00:00:14,611 --> 00:00:20,161
+00:00:13,784 --> 00:00:17,682
 Sometimes I go for
 a walk with my friends.
 
 5
-00:00:20,211 --> 00:00:23,539
+00:00:17,712 --> 00:00:20,036
 I also like reading books.
 
 6
-00:00:24,089 --> 00:00:27,675
+00:00:20,600 --> 00:00:23,450
 In my free time,
 I usually watch films,
 
 7
-00:00:27,725 --> 00:00:31,207
+00:00:23,480 --> 00:00:26,559
 listen to music and
 meet my friends.
 
 8
-00:00:31,257 --> 00:00:33,480
+00:00:26,589 --> 00:00:28,552
 At weekends, I sometimes go
 
 9
-00:00:33,530 --> 00:00:36,103
+00:00:28,582 --> 00:00:31,291
 shopping or
 visit my relatives.
 
 10
-00:00:36,153 --> 00:00:38,830
+00:00:31,321 --> 00:00:34,017
 I also enjoy
 reading interesting books
 
 11
-00:00:38,880 --> 00:00:41,907
+00:00:34,047 --> 00:00:36,692
 because I can
 learn new things.
 
 12
-00:00:41,957 --> 00:00:46,348
+00:00:36,722 --> 00:00:41,271
 My favourite activity is
 watching films with my family.
 
 13
-00:00:46,898 --> 00:00:50,510
+00:00:41,833 --> 00:00:45,073
 I usually spend my
 free time doing different activities.
 
 14
-00:00:50,560 --> 00:00:53,586
+00:00:45,103 --> 00:00:48,710
 I enjoy watching films,
 especially comedies, because they
 
 15
-00:00:53,636 --> 00:00:56,479
+00:00:48,740 --> 00:00:50,988
 help me relax after
 a busy day.
 
 16
-00:00:56,529 --> 00:01:00,525
+00:00:51,018 --> 00:00:54,289
 I also like meeting my
 friends and trying new things.
 
 17
-00:01:00,575 --> 00:01:03,986
+00:00:54,319 --> 00:00:57,583
 Recently, I've become interested
 in reading books because I
 
 18
-00:01:04,036 --> 00:01:07,648
+00:00:57,613 --> 00:01:00,506
 think it's a great
 way to improve my knowledge.
 
 19
-00:01:07,698 --> 00:01:11,110
+00:01:00,536 --> 00:01:02,754
 If I have enough
 free time, I prefer going
 
 20
-00:01:11,160 --> 00:01:14,771
+00:01:02,784 --> 00:01:06,284
 somewhere with my friends
 rather than staying at home.
 
 21
-00:01:15,321 --> 00:01:18,321
+00:01:06,767 --> 00:01:09,867
 QUESTION 2
 What is your favourite food?
 
 22
-00:01:18,621 --> 00:01:21,949
+00:01:10,367 --> 00:01:12,969
 My favourite food is pizza.
 
 23
-00:01:21,999 --> 00:01:24,771
+00:01:12,999 --> 00:01:15,136
 I like cheese pizza.
 
 24
-00:01:24,821 --> 00:01:28,704
+00:01:15,166 --> 00:01:17,449
 I eat it with my family.
 
 25
-00:01:28,754 --> 00:01:32,082
+00:01:17,479 --> 00:01:19,751
 I also like ice cream.
 
 26
-00:01:32,632 --> 00:01:37,478
+00:01:20,333 --> 00:01:24,686
 My favourite food is pizza
 because it is very delicious.
 
 27
-00:01:37,528 --> 00:01:42,828
+00:01:24,716 --> 00:01:28,859
 I usually eat it at weekends
 with my family or friends.
 
 28
-00:01:42,878 --> 00:01:46,814
+00:01:28,889 --> 00:01:32,144
 I also enjoy trying
 different types of food.
 
 29
-00:01:46,864 --> 00:01:49,541
+00:01:32,174 --> 00:01:34,079
 I don't really like spicy food
 
 30
-00:01:49,591 --> 00:01:53,073
+00:01:34,109 --> 00:01:36,589
 because it is too hot for me.
 
 31
-00:01:53,623 --> 00:01:55,881
+00:01:37,167 --> 00:01:38,362
 If I had to choose my
 
 32
-00:01:55,931 --> 00:01:58,773
+00:01:38,392 --> 00:01:41,288
 favourite food, I would
 definitely say pizza.
 
 33
-00:01:58,823 --> 00:02:01,850
+00:01:41,318 --> 00:01:43,376
 I enjoy it because
 there are so many
 
 34
-00:02:01,900 --> 00:02:04,742
+00:01:43,406 --> 00:01:46,401
 different flavours and toppings
 to choose from.
 
 35
-00:02:04,792 --> 00:02:08,588
+00:01:46,431 --> 00:01:48,522
 I usually eat it when
 I go out with my
 
 36
-00:02:08,638 --> 00:02:12,250
+00:01:48,552 --> 00:01:51,389
 friends or when my
 family orders food at home.
 
 37
-00:02:12,300 --> 00:02:14,942
+00:01:51,419 --> 00:01:53,546
 Although I like trying
 new dishes, I
 
 38
-00:02:14,992 --> 00:02:17,635
+00:01:53,576 --> 00:01:56,181
 still prefer homemade meals
 because they are
 
 39
-00:02:17,685 --> 00:02:20,527
+00:01:56,211 --> 00:01:59,218
 usually healthier and remind
 me of home.
 
 40
-00:02:21,077 --> 00:02:24,077
+00:01:59,700 --> 00:02:02,800
 QUESTION 3
 What kind of weather do you like?
 
 41
-00:02:24,377 --> 00:02:27,149
+00:02:03,300 --> 00:02:05,246
 I like sunny weather.
 
 42
-00:02:27,199 --> 00:02:30,527
+00:02:05,276 --> 00:02:07,423
 It is warm and nice.
 
 43
-00:02:30,577 --> 00:02:36,127
+00:02:07,453 --> 00:02:10,980
 I can go outside
 and play with my friends.
 
 44
-00:02:36,177 --> 00:02:39,505
+00:02:11,010 --> 00:02:13,184
 I don't like rainy days.
 
 45
-00:02:40,055 --> 00:02:43,537
+00:02:13,767 --> 00:02:16,508
 My favourite weather is
 sunny and warm.
 
 46
-00:02:43,587 --> 00:02:48,432
+00:02:16,538 --> 00:02:19,800
 I enjoy going for walks
 when the sun is shining.
 
 47
-00:02:48,482 --> 00:02:51,614
+00:02:19,830 --> 00:02:22,546
 I also like spring
 because the weather
 
 48
-00:02:51,664 --> 00:02:55,146
+00:02:22,576 --> 00:02:24,946
 is not too hot or too cold.
 
 49
-00:02:55,196 --> 00:02:57,873
+00:02:24,976 --> 00:02:27,363
 Rainy weather is
 not my favourite
 
 50
-00:02:57,923 --> 00:03:01,405
+00:02:27,393 --> 00:02:31,004
 because I cannot spend
 much time outside.
 
 51
-00:03:01,955 --> 00:03:04,982
+00:02:31,567 --> 00:02:34,427
 I definitely prefer warm
 and sunny weather because
 
 52
-00:03:05,032 --> 00:03:08,259
+00:02:34,457 --> 00:02:37,329
 it makes me feel
 more energetic and positive.
 
 53
-00:03:08,309 --> 00:03:11,335
+00:02:37,359 --> 00:02:40,396
 During sunny days, I
 enjoy spending time outdoors,
 
 54
-00:03:11,385 --> 00:03:14,228
+00:02:40,426 --> 00:02:43,026
 going for walks or
 meeting my friends.
 
 55
-00:03:14,278 --> 00:03:18,074
+00:02:43,056 --> 00:02:47,317
 However, I also appreciate rainy
 weather sometimes because it creates
 
 56
-00:03:18,124 --> 00:03:21,920
+00:02:47,347 --> 00:02:50,488
 a peaceful atmosphere and gives
 me a reason to stay
 
 57
-00:03:21,970 --> 00:03:25,582
+00:02:50,518 --> 00:02:53,089
 at home, read a
 book or watch a film.
 
 58
-00:03:25,632 --> 00:03:29,243
+00:02:53,119 --> 00:02:56,486
 I think every season
 has something special to offer.
 
