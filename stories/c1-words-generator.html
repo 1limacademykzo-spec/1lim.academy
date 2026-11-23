@@ -185,7 +185,7 @@ function coverSlide(){
 function finalSlide(n){
   const cv=document.createElement("canvas");cv.width=W;cv.height=H;const ctx=cv.getContext("2d");
   bg(ctx);
-  drawPhoto(ctx,photos.p1,{x:60,y:900,w:W-120,h:H-900},$("s1").value/100,"1-фото");
+  drawPhoto(ctx,photos.p2,{x:60,y:900,w:W-120,h:H-900},$("s2").value/100,"2-фото");
   brand(ctx,170);ctx.textAlign="center";ctx.textBaseline="alphabetic";
   ctx.fillStyle=C.white;fitFont(ctx,"ОСЫ "+n+" СӨЗДІҢ",900,96,W-120);ctx.fillText("ОСЫ "+n+" СӨЗДІҢ",W/2,420);
   ctx.fillStyle=C.lime;fitFont(ctx,"ҚАЙСЫСЫН БІЛДІҢ?",900,96,W-120);ctx.fillText("ҚАЙСЫСЫН БІЛДІҢ?",W/2,530);
