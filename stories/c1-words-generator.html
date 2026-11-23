@@ -1,0 +1,226 @@
+<title>1lim Stories C1</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800;900&display=swap">
+<style>
+/* Layout: control column on the left, story previews in a wrapping strip on the right; stacks on phones */
+:root{
+  --bg:#f3f7f1; --panel:#ffffff; --fg:#0c241b; --muted:#557064; --line:#d6e3da;
+  --emerald:#0b6e4f; --lime:#d4fa52; --on-lime:#073d2c;
+  --display:"Montserrat",system-ui,sans-serif; --body:"Montserrat",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#06140f; --panel:#0d221a; --fg:#e6f2ea; --muted:#8fb0a2; --line:#1d3b2f; --emerald:#39c493; color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#06140f; --panel:#0d221a; --fg:#e6f2ea; --muted:#8fb0a2; --line:#1d3b2f; --emerald:#39c493; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:24px 48px}
+.wrap{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:28px;align-items:start}
+@media (max-width:860px){.wrap{grid-template-columns:minmax(0,1fr)}}
+header{max-width:1280px;margin:0 auto 20px}
+h1{font-family:var(--display);font-weight:900;font-size:clamp(22px,4vw,32px);margin:0 0 6px;letter-spacing:-.01em;text-wrap:balance}
+h1 span{background:var(--lime);color:var(--on-lime);padding:0 .3em;border-radius:6px}
+header p{margin:0;color:var(--muted);max-width:65ch;line-height:1.5}
+.controls{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:16px;min-width:0}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+label,.lbl{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+input[type=text],textarea{font:inherit;font-size:14px;color:var(--fg);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:9px 10px;width:100%;box-sizing:border-box}
+textarea{min-height:150px;line-height:1.5;resize:vertical;font-size:13px}
+input[type=file]{font-size:13px;max-width:100%}
+input[type=range]{width:100%;accent-color:var(--emerald)}
+:focus-visible{outline:2px solid var(--emerald);outline-offset:2px}
+.hint{font-size:12px;color:var(--muted);line-height:1.45;margin:0}
+.photo{display:grid;grid-template-columns:56px minmax(0,1fr);gap:10px;align-items:center;padding:10px;border:1px dashed var(--line);border-radius:10px}
+.thumb{width:56px;height:56px;border-radius:8px;background:var(--lime);display:grid;place-items:center;font-weight:900;color:var(--on-lime);overflow:hidden}
+.thumb img{width:100%;height:100%;object-fit:cover}
+.previews{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;min-width:0}
+figure{margin:0;display:flex;flex-direction:column;gap:6px}
+figure img{width:100%;aspect-ratio:9/16;border-radius:10px;display:block;box-shadow:0 6px 20px rgb(0 0 0 / .18)}
+figcaption{font-size:12px;color:var(--muted)}
+.save{background:var(--lime);color:var(--on-lime);border-radius:10px;padding:12px 14px;font-size:13px;line-height:1.45;font-weight:600}
+</style>
+
+<header>
+  <h1>Сторис генераторы <span>A2 → C1</span></h1>
+  <p>Екі фото жүктеңіз (кейіпкердің сабырлы және эмоциялы сәті), сөздерді өзгертіңіз. Стористер 1080×1920 өлшемде бірден дайын болады.</p>
+</header>
+
+<div class="wrap">
+  <form class="controls" id="form" onsubmit="return false">
+    <div class="field">
+      <span class="lbl">Кейіпкер фотолары</span>
+      <div class="photo"><div class="thumb" id="t1">A2</div>
+        <div class="field"><label for="p1">1-эмоция: сабырлы / таңданған (A2)</label><input type="file" id="p1" accept="image/*"></div></div>
+      <div class="photo"><div class="thumb" id="t2">C1</div>
+        <div class="field"><label for="p2">2-эмоция: шок / айқай (C1)</label><input type="file" id="p2" accept="image/*"></div></div>
+      <p class="hint">Фоны жоқ PNG ең әдемі шығады (фонды remove.bg сияқты сервиспен алып тастауға болады).</p>
+    </div>
+    <div class="field"><label for="s1">1-фото өлшемі</label><input type="range" id="s1" min="60" max="160" value="100"></div>
+    <div class="field"><label for="s2">2-фото өлшемі</label><input type="range" id="s2" min="60" max="160" value="100"></div>
+    <div class="field">
+      <label for="words">Сөздер</label>
+      <textarea id="words" spellcheck="false"></textarea>
+      <p class="hint">Әр жолға бір жұп: A2 сөз | аудармасы | C1 сөз | аудармасы</p>
+    </div>
+    <div class="field"><label for="h1">Мұқаба: 1-жол</label><input type="text" id="h1" value="ҚАРАПАЙЫМ"></div>
+    <div class="field"><label for="h2">Мұқаба: 2-жол</label><input type="text" id="h2" value="СӨЗДЕРДІ КҮШЕЙТ"></div>
+    <div class="field"><label for="pill">Мұқаба: белгі</label><input type="text" id="pill" value="C1 ДЕҢГЕЙІНЕ ДЕЙІН"></div>
+    <div class="field"><label for="brand">Бренд</label><input type="text" id="brand" value="1lim.academy"></div>
+    <div class="save">Сақтау: суретті басып тұрып (немесе тінтуірдің оң жақ батырмасы) → «Суретті сақтау».</div>
+  </form>
+  <section class="previews" id="out" aria-live="polite"></section>
+</div>
+
+<script>
+const W=1080,H=1920;
+const C={lime:"#D4FA52",em:"#0B6E4F",deep:"#04281D",mid:"#0A5A41",white:"#FFFFFF",soft:"#E4F5EC"};
+const DEFAULT_WORDS=[
+ "SCARED | қорыққан | PETRIFIED | қорыққаннан сілейіп қалған",
+ "HAPPY | қуанышты | ELATED | қуаныштан төбесі көкке жеткен",
+ "SMART | ақылды | INGENIOUS | өте тапқыр, айлакер",
+ "HUNGRY | аш | RAVENOUS | қасқырдай ашыққан",
+ "BRAVE | батыл | INTREPID | ештеңеден тайсалмайтын"
+].join("\n");
+const $=id=>document.getElementById(id);
+$("words").value=DEFAULT_WORDS;
+const photos={p1:null,p2:null};
+
+function bg(ctx){
+  const g=ctx.createRadialGradient(W*.62,H*.42,80,W*.5,H*.5,H*.75);
+  g.addColorStop(0,"#11946A");g.addColorStop(.45,C.em);g.addColorStop(1,C.deep);
+  ctx.fillStyle=g;ctx.fillRect(0,0,W,H);
+  // lime glow
+  const l=ctx.createRadialGradient(W*.95,H*.1,0,W*.95,H*.1,620);
+  l.addColorStop(0,"rgba(212,250,82,.38)");l.addColorStop(1,"rgba(212,250,82,0)");
+  ctx.fillStyle=l;ctx.fillRect(0,0,W,H);
+  const l2=ctx.createRadialGradient(0,H*.92,0,0,H*.92,700);
+  l2.addColorStop(0,"rgba(212,250,82,.22)");l2.addColorStop(1,"rgba(212,250,82,0)");
+  ctx.fillStyle=l2;ctx.fillRect(0,0,W,H);
+}
+function brand(ctx,y=190){
+  const t=$("brand").value.trim()||"1lim.academy";
+  ctx.font="800 38px Montserrat";ctx.textAlign="center";ctx.textBaseline="middle";
+  const w=ctx.measureText(t).width;
+  ctx.fillStyle=C.lime;ctx.beginPath();ctx.arc(W/2-w/2-26,y,10,0,Math.PI*2);ctx.fill();
+  ctx.fillStyle=C.white;ctx.fillText(t,W/2+4,y);
+  ctx.textAlign="left";
+}
+function pill(ctx,x,y,w,h,fill,stroke,text,tc,font){
+  ctx.beginPath();ctx.roundRect(x,y,w,h,h/2);
+  if(fill){ctx.fillStyle=fill;ctx.fill()}
+  if(stroke){ctx.lineWidth=4;ctx.strokeStyle=stroke;ctx.stroke()}
+  ctx.font=font;ctx.fillStyle=tc;ctx.textAlign="center";ctx.textBaseline="middle";
+  ctx.fillText(text,x+w/2,y+h/2+3);ctx.textAlign="left";
+}
+function fitFont(ctx,text,weight,size,maxW){
+  do{ctx.font=`${weight} ${size}px Montserrat`;if(ctx.measureText(text).width<=maxW)break;size-=4}while(size>30);
+  return size;
+}
+function wrap(ctx,text,maxW){
+  const words=text.split(/\s+/),lines=[];let cur="";
+  for(const w of words){const t=cur?cur+" "+w:w;if(ctx.measureText(t).width>maxW&&cur){lines.push(cur);cur=w}else cur=t}
+  if(cur)lines.push(cur);return lines;
+}
+function placeholder(ctx,box,label){
+  const {x,y,w,h}=box,cx=x+w/2;
+  ctx.save();ctx.globalAlpha=.9;ctx.fillStyle="rgba(212,250,82,.16)";
+  const r=w*.2;ctx.beginPath();ctx.arc(cx,y+h-w*.62-r*.1,r,0,Math.PI*2);ctx.fill();
+  ctx.beginPath();ctx.ellipse(cx,y+h,w*.42,w*.34,0,Math.PI,0);ctx.fill();
+  ctx.setLineDash([14,12]);ctx.lineWidth=3;ctx.strokeStyle="rgba(212,250,82,.5)";
+  ctx.strokeRect(x+10,y+10,w-20,h-20);ctx.setLineDash([]);
+  ctx.font="600 30px Montserrat";ctx.fillStyle=C.lime;ctx.textAlign="center";
+  ctx.fillText(label,cx,y+60);ctx.textAlign="left";ctx.restore();
+}
+// draw image contained in box, bottom-anchored, horizontally centred on box
+function drawPhoto(ctx,img,box,scale,label){
+  if(!img){placeholder(ctx,box,label);return}
+  const s=Math.min(box.w/img.width,box.h/img.height)*scale;
+  const w=img.width*s,h=img.height*s;
+  ctx.drawImage(img,box.x+(box.w-w)/2,box.y+box.h-h,w,h);
+}
+function level(ctx,y,lvl,word,tr,isC1){
+  const x=96;
+  if(isC1) pill(ctx,x,y,210,86,C.lime,null,lvl,C.deep,"900 52px Montserrat");
+  else pill(ctx,x,y,210,86,null,"rgba(255,255,255,.85)",lvl,C.white,"800 52px Montserrat");
+  const size=fitFont(ctx,word,900,isC1?104:92,540);
+  ctx.fillStyle=isC1?C.lime:C.white;ctx.textBaseline="alphabetic";
+  ctx.fillText(word,x,y+86+28+size*.82);
+  ctx.font="300 50px Montserrat";ctx.fillStyle=C.soft;
+  const lines=wrap(ctx,tr,520);let ly=y+86+28+size*.82+70;
+  for(const l of lines){ctx.fillText(l,x,ly);ly+=60}
+}
+function wordSlide(pair){
+  const cv=document.createElement("canvas");cv.width=W;cv.height=H;const ctx=cv.getContext("2d");
+  bg(ctx);
+  // bottom half slightly darker band
+  ctx.fillStyle="rgba(4,40,29,.28)";ctx.fillRect(0,H/2,W,H/2);
+  const sc1=$("s1").value/100,sc2=$("s2").value/100;
+  drawPhoto(ctx,photos.p1,{x:500,y:250,w:600,h:H/2-250},sc1,"1-фото");
+  ctx.fillStyle=C.lime;ctx.fillRect(0,H/2-3,W,6);
+  drawPhoto(ctx,photos.p2,{x:540,y:H/2+180,w:560,h:H/2-180},sc2,"2-фото");
+  brand(ctx);
+  level(ctx,330,"A2",pair[0],pair[1],false);
+  level(ctx,H/2+200,"C1",pair[2],pair[3],true);
+  return cv;
+}
+function coverSlide(){
+  const cv=document.createElement("canvas");cv.width=W;cv.height=H;const ctx=cv.getContext("2d");
+  bg(ctx);
+  drawPhoto(ctx,photos.p2,{x:40,y:640,w:W-80,h:H-640},$("s2").value/100*1.05,"2-фото");
+  // fade bottom for legibility
+  const f=ctx.createLinearGradient(0,H-520,0,H);f.addColorStop(0,"rgba(4,40,29,0)");f.addColorStop(1,"rgba(4,40,29,.92)");
+  ctx.fillStyle=f;ctx.fillRect(0,H-520,W,520);
+  brand(ctx,170);
+  ctx.textAlign="center";ctx.textBaseline="alphabetic";ctx.fillStyle=C.white;
+  const a=$("h1").value.trim(),b=$("h2").value.trim();
+  let s=fitFont(ctx,a,900,132,W-120);ctx.fillText(a,W/2,410);
+  s=fitFont(ctx,b,900,104,W-120);ctx.fillStyle=C.lime;ctx.fillText(b,W/2,410+s+26);
+  const p=$("pill").value.trim();ctx.font="800 40px Montserrat";
+  const pw=ctx.measureText(p).width+90;pill(ctx,(W-pw)/2,410+s+70,pw,76,C.lime,null,p,C.deep,"800 40px Montserrat");
+  ctx.textAlign="center";ctx.font="800 46px Montserrat";ctx.fillStyle=C.white;
+  ctx.fillText("СӨЗДІК ҚОРЫҢДЫ ТОЛЫҚТЫР",W/2,H-190);
+  ctx.strokeStyle=C.lime;ctx.lineWidth=6;ctx.lineCap="round";ctx.beginPath();
+  ctx.moveTo(W-110,H-130);ctx.lineTo(W-80,H-100);ctx.lineTo(W-110,H-70);ctx.stroke();
+  ctx.textAlign="left";return cv;
+}
+function finalSlide(n){
+  const cv=document.createElement("canvas");cv.width=W;cv.height=H;const ctx=cv.getContext("2d");
+  bg(ctx);
+  drawPhoto(ctx,photos.p1,{x:60,y:900,w:W-120,h:H-900},$("s1").value/100,"1-фото");
+  brand(ctx,170);ctx.textAlign="center";ctx.textBaseline="alphabetic";
+  ctx.fillStyle=C.white;fitFont(ctx,"ОСЫ "+n+" СӨЗДІҢ",900,96,W-120);ctx.fillText("ОСЫ "+n+" СӨЗДІҢ",W/2,420);
+  ctx.fillStyle=C.lime;fitFont(ctx,"ҚАЙСЫСЫН БІЛДІҢ?",900,96,W-120);ctx.fillText("ҚАЙСЫСЫН БІЛДІҢ?",W/2,530);
+  ctx.font="400 46px Montserrat";ctx.fillStyle=C.soft;
+  ctx.fillText("Жауабыңды директке жаз,",W/2,650);ctx.fillText("сақтап ал да, досыңа жібер",W/2,712);
+  const t="1lim.academy";ctx.font="800 44px Montserrat";const pw=ctx.measureText(t).width+100;
+  pill(ctx,(W-pw)/2,790,pw,86,C.lime,null,t,C.deep,"800 44px Montserrat");
+  ctx.textAlign="left";return cv;
+}
+function pairs(){
+  return $("words").value.split("\n").map(l=>l.split("|").map(s=>s.trim())).filter(p=>p.length>=4&&p[0]&&p[2])
+    .map(p=>[p[0].toUpperCase(),p[1],p[2].toUpperCase(),p[3]]);
+}
+let timer;
+async function render(){
+  const sample="AaҚқӘәӨөҰұҮүҒғҢңІіҺһЙй";
+  try{await Promise.all(["300","400","600","800","900"].map(w=>document.fonts.load(`${w} 40px Montserrat`,sample)))}catch(e){}
+  const ps=pairs(),out=$("out"),slides=[["Мұқаба",coverSlide()]];
+  ps.forEach((p,i)=>slides.push([`${i+1}. ${p[0]} → ${p[2]}`,wordSlide(p)]));
+  slides.push(["Соңғы слайд",finalSlide(ps.length)]);
+  out.innerHTML="";
+  slides.forEach(([cap,cv],i)=>{
+    const f=document.createElement("figure"),img=new Image();
+    img.src=cv.toDataURL("image/png");img.alt=cap;
+    const fc=document.createElement("figcaption");fc.textContent=`${String(i+1).padStart(2,"0")} · ${cap}`;
+    f.append(img,fc);out.append(f);
+  });
+}
+function schedule(){clearTimeout(timer);timer=setTimeout(render,250)}
+["p1","p2"].forEach(id=>$(id).addEventListener("change",e=>{
+  const file=e.target.files[0];if(!file)return;
+  const url=URL.createObjectURL(file),img=new Image();
+  img.onload=()=>{photos[id]=img;const t=$(id==="p1"?"t1":"t2");t.innerHTML="";const im=new Image();im.src=url;im.alt="";t.append(im);render()};
+  img.src=url;
+}));
+$("form").addEventListener("input",e=>{if(e.target.type!=="file")schedule()});
+render();
+</script>
